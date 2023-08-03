@@ -1,0 +1,53 @@
+import java.util.*;
+
+public class Ejercicio3 {
+
+    public static float potenciacion(float num, int expo){
+        float  base = num;
+        for(int i = 1; i < expo; i++){
+            System.out.println(num);
+            num *= base;
+
+        }
+        return num;
+    }
+    public static float raiz_cuadrada(float num){
+        return num * num;
+    }
+
+    public static void salir(){
+
+        System.out.println("Terminacion del programa exitoso");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Elige una opcion:\n" +
+                "1: potenciacion\n" +
+                "2: raiz cuadrada\n" +
+                "3: terminar:");
+        int opcion = new Scanner(System.in).nextInt();
+        switch (opcion){
+            case 1:
+                System.out.println("Ingresa el numero base:");
+                float base = new Scanner(System.in).nextFloat();
+                System.out.println("Ingresa el numero del exponente:");
+                int exponente = new Scanner(System.in).nextInt();
+                System.out.println("El resultado es: "+potenciacion(base, exponente));
+                break;
+
+            case 2:
+                System.out.println("Ingresa el numero:");
+                float num = new Scanner(System.in).nextFloat();
+                System.out.println("la raiz cuadrada es:"+raiz_cuadrada(num));
+                break;
+
+            case 3:
+                salir();
+                break;
+
+            default:
+                System.out.println("Opcion incorrecta");
+
+        }
+    }
+}
