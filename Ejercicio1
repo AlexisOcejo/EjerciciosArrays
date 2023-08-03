@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Ejercicio1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingresa la cantidad de dinero: ");
+        int dinero = sc.nextInt();
+        cambio(dinero);
+    }
+    public static void cambio(int valor){
+        int[] billetes = {100, 50, 20, 10, 5, 1};
+        int[] cantidad = new int[billetes.length];
+        String[] entrega = {"100","50","20","10","5","1"};
+
+        for(int i =0; i < billetes.length; i++){
+            cantidad [i] = valor / billetes[i];
+            valor = valor % billetes[i];
+        }
+        for( int i = 0; i < cantidad.length; i++){
+            System.out.println("La cantidad de billetes de "+entrega[i]+" :"+cantidad[i]);
+        }
+
+
+    }
+}
