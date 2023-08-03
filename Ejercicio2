@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Ejercicio2 {
+
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ingresa dollares:");
+        float dollars = sc.nextFloat();
+        System.out.println("ingresa pesos colombianos");
+        float pesos = sc.nextFloat();
+        System.out.println("el tipo de cambio de "+dollars+" dolares a pesos colombianos son "+dollars_pesosColombianos(dollars));
+        System.out.println("el tipo de cambio de "+pesos+" pesos a dolares son "+pesosColombianos_dollars(pesos));
+
+    }
+    public  static float dollars_pesosColombianos(float dollars){
+
+        return dollars / 0.00025f;
+    }
+    public static float pesosColombianos_dollars(float colombianos){
+
+        return colombianos * 0.00025f;
+    }
+}
